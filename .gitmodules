@@ -1,0 +1,3 @@
+[submodule "path_to_submodule"]
+  path = docs/.vuepress/dist
+  url = git://github.com/dabernathy89/vue-query-builder/
