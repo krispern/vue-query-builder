@@ -42,6 +42,17 @@ export default {
   beforeMount () {
     if (this.rule.type === 'custom-component') {
       this.$options.components[this.id] = this.rule.component;
+      if(this.query.value === null)
+      {
+        if(typeof this.rule.default !== 'undefined')
+        {
+          this.query.value = deepClone(this.rule.default);
+        }
+        else
+        {
+          this.query.value = {};
+        }
+      }
     }
   },
 
