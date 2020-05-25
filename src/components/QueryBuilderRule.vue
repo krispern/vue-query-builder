@@ -39,7 +39,7 @@ export default {
     }
   },
 
-  beforeMount: function beforeMount() {
+  beforeMount () {
     if (this.rule.type === 'custom-component') {
       this.$options.components[this.id] = this.rule.component;
       if(this.query.value === null)
